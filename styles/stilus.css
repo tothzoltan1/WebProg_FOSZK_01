@@ -1,8 +1,9 @@
 header {
     border-radius: 10px;
-    background-color: yellow;
+    background-color: #969696;
     padding: 10px;
     margin: 10px;
+    color: white;
 }
 
 header img {
@@ -19,30 +20,37 @@ aside {
     vertical-align: top;
 }
 
-nav {
-    margin: 0px 10px 0px 0px;
-    top: 0px;
-    border-radius: 10px;
-    background-color: #FF6600;
+/* Eltávolítja a listajeleket, és vízszintesen elrendezi az elemeket */
+#nav ul {
+list-style-type: none;  /* Pöttyök eltüntetése */
+margin: 0;
+padding: 0;
+display: flex;          /* Flexbox: ettől lesz vízszintes az elrendezés */
+flex-wrap: wrap;        /* Kisebb képernyőn tördelje, ha nem fér ki */
+background-color: #969696; /* Tetszőleges háttérszín */
+border-radius: 10px;
 }
 
-nav ul {
-    list-style-type: none;
-    margin: 0px;
-    padding: 15px 0px;
+/* Az egyes menüpontok stílusa */
+#nav li a {
+display: block;
+color: white;
+text-align: center;
+padding: 14px 20px;
+text-decoration: none;
+transition: background-color 0.2s ease;
 }
 
-nav ul li {
-    padding: 0px 15px;;
+/* Ráközelítéskor (hover) és aktív állapotban */
+#nav li a:hover,
+#nav li.active a {
+background-color: #04AA6D; /* Kiemelő háttérszín */
+border-radius: 10px;
 }
 
-nav ul li.active {
-    border-right: 5px solid blue;
-}
-
-nav ul a {
-    text-decoration: none;
-    color: blue;
+#nav,
+aside#nav {
+    margin-bottom: 20px; /* Ezzel állítod a menü és az alatta lévő tartalom közötti rést */
 }
 
 div#content {
@@ -66,5 +74,6 @@ footer {
     border-radius: 10px;
     margin: 10px;
     padding: 5px 20px;
-    background-color: #CC99FF;
+    background-color: #969696;
 }
+

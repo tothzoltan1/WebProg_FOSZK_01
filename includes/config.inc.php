@@ -12,7 +12,7 @@ $fejlec = array(
 
 $lablec = array(
     'copyright' => 'Copyright '.date("Y").'.',
-    'ceg' => 'Mini honlap Kft.'
+    'ceg' => 'NJE WebProg csapat.'
 );
 
 $oldalak = array(
