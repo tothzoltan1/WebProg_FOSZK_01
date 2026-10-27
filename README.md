@@ -6,9 +6,9 @@ Csoport tagok:
 @tothzoltan1
 @ilyeslaszlo87
 @szendreaitavi
-
+*****************************
 stilus.css-ből kivett elemek
-
+****************************
 nav {
     margin: 0px 10px 0px 0px;
     top: 0px;
