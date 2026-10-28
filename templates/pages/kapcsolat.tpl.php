@@ -4,3 +4,54 @@
 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2726.3375296155727!2d19.66695091525771!3d46.89607994478184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4743da7a6c479e1d%3A0xc8292b3f6dc69e7f!2sPallasz+Ath%C3%A9n%C3%A9+Egyetem+GAMF+Kar!5e0!3m2!1shu!2shu!4v1475753185783" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 <br>
 <a target="_blank" href="https://www.google.hu/maps/place/Pallasz+Ath%C3%A9n%C3%A9+Egyetem+GAMF+Kar/@46.8960799,19.6669509,17z/data=!3m1!4b1!4m5!3m4!1s0x4743da7a6c479e1d:0xc8292b3f6dc69e7f!8m2!3d46.8960763!4d19.6691396?hl=hu">Nagyobb térkép</a>
+
+<h2>Kapcsolatfelvétel</h2>
+
+<?php if (isset($_GET['siker']) && $_GET['siker'] == '1'): ?>
+    <p style="color: green; font-weight: bold;">
+        Az üzenetedet sikeresen elküldtük!
+    </p>
+<?php endif; ?>
+<form method="POST" action="/../logicals/kapcsolat_feldolgoz.php" novalidate>
+<label for="nev">Név:</label>
+<input type="text" id="nev" name="nev" required>
+<br><br>
+<label for="email">E-mail-cím:</label>
+<input type="email" id="email" name="email" required>
+<br><br>
+<label for="uzenet">Üzenet:</label>
+<br>
+<textarea id="uzenet" name="uzenet" rows="5" cols="50" required></textarea>
+<br><br>
+<button type="submit">Üzenet küldése</button>
+</form>
+
+<script>
+document.querySelector('form[action="/../logicals/kapcsolat_feldolgoz.php"]')
+    .addEventListener("submit", function(event) {
+
+    const nev = document.getElementById("nev").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const uzenet = document.getElementById("uzenet").value.trim();
+
+    const emailMinta = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (nev === "") {
+        alert("Kérlek, add meg a neved!");
+        event.preventDefault();
+        return;
+    }
+
+    if (!emailMinta.test(email)) {
+        alert("Kérlek, adj meg egy érvényes e-mail-címet!");
+        event.preventDefault();
+        return;
+    }
+
+    if (uzenet === "") {
+        alert("Kérlek, írd be az üzenetedet!");
+        event.preventDefault();
+        return;
+    }
+});
+</script>
