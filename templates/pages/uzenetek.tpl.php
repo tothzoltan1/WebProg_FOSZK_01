@@ -1,5 +1,7 @@
 
 <?php
+require_once __DIR__ . '/../../includes/db.inc.php';
+
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
@@ -14,13 +16,13 @@ if (!isset($_SESSION['login'])) {
 
 <?php
 try {
-    $db = new PDO(
-        "mysql:host=localhost;dbname=vaszilij_kapcsolat;charset=utf8mb4",
-        "root",
-        "",
+/*    $db = new PDO(
+        "mysql:host=localhost;dbname=lkz01_db;charset=utf8mb4",
+        "beadando_user",
+        "123qweasd",
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
-
+*/
     $sql = "SELECT nev, email, uzenet, bekuldes_ideje
             FROM kapcsolati_uzenetek
             ORDER BY bekuldes_ideje DESC, id DESC";

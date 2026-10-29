@@ -12,7 +12,7 @@
         Az üzenetedet sikeresen elküldtük!
     </p>
 <?php endif; ?>
-<form method="POST" action="/../logicals/kapcsolat_feldolgoz.php" novalidate>
+<form method="POST" action="/../../logicals/kapcsolat_feldolgoz.php" novalidate>
 <label for="nev">Név:</label>
 <input type="text" id="nev" name="nev" required>
 <br><br>

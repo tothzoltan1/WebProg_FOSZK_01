@@ -1,6 +1,7 @@
 
 <?php
 session_start();
+require_once __DIR__ . '/../includes/db.inc.php';
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nev = isset($_SESSION["login"])
@@ -14,13 +15,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     }
 
     try {
-        $db = new PDO(
-            "mysql:host=localhost;dbname=vaszilij_kapcsolat;charset=utf8mb4",
-            "root",
-            "",
+/*        $db = new PDO(
+            "mysql:host=localhost;dbname=lkz01_db;charset=utf8mb4",
+            "beadando_user",
+            "123qweasd",
             [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
         );
-
+*/
         $sql = "INSERT INTO kapcsolati_uzenetek (nev, email, uzenet)
                 VALUES (:nev, :email, :uzenet)";
 
