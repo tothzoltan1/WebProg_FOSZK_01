@@ -77,3 +77,52 @@ footer {
     background-color: #969696;
 }
 
+/* 
+   MOBIL NÉZET - Csak 768px képernyőszélesség alatt lép életbe!
+*/
+@media screen and (max-width: 768px) {
+    
+    /* A fejléc elemeinek (kép és szöveg) egymás alá rendezése és középre igazítása mobilon */
+    header {
+        text-align: center;
+    }
+    header img {
+        float: none;
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* A wrapper-ből kivesszük a table viselkedést, ha volt */
+    div#wrapper {
+        display: block; 
+    }
+
+    /* Az oldalsáv (menü) és a tartalom (content) is a teljes képernyőszélességet használja és egymás alá kerül */
+    aside {
+        display: block;
+        width: 100%;
+    }
+    
+    div#content {
+        display: block;
+        width: auto; /* a 100% helyett auto, hogy a paddingokkal is elférjen */
+        box-sizing: border-box; /* Biztosítja, hogy a padding ne növelje a szélességet */
+    }
+
+    /* A tartalomban lévő képek ne lógjanak ki a képernyőről */
+    div#content img {
+        width: 100%; /* Kitölti a rendelkezésre álló helyet */
+        float: none; /* Mobilon nem akarjuk jobb oldalra tolni */
+        margin: 10px 0;
+        box-sizing: border-box;
+    }
+    
+    /* A menügombok térjenek ki a teljes szélességre mobilon a könnyebb kattintásért */
+    #nav ul {
+        flex-direction: column;
+    }
+    
+    #nav li {
+        width: 100%;
+    }
+}
