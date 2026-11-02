@@ -22,7 +22,7 @@ div.kep img {
         echo '</ul>';
     }
     ?>
-    <form action="?oldal=kepek" method="post" enctype="multipart/form-data">
+    <form action="/kepek" method="post" enctype="multipart/form-data">
         <label>Kép:
             <input type="file" name="fajl" required>
         </label>
