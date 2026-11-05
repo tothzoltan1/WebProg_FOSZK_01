@@ -184,10 +184,10 @@
                 <!-- 2. oszlop: Saját mp4 videó és forrás -->
                 <div class="video-column">
                     <video class="local-video" controls>
-                        <source src="./video/video.mp4" type="video/mp4">
+                        <source src="./video/video2.mp4" type="video/mp4">
                         A böngésződ nem támogatja a videó lejátszását.
                     </video>
-                    <div class="video-source">Forrás: Kések háza youtube csatornája</div>
+                    <div class="video-source">Forrás: Gemini AI</div>
                 </div>
             </div>
             
