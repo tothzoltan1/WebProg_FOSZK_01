@@ -161,8 +161,7 @@
     
     <img src="./images/kesek.jpg" alt="Illusztráció" class="hero-image">
     
-    <h3>Történeti áttekintés</h3>
-    <p>A kés az emberiség egyik legrégebbi és legfontosabb eszköze. A kőkorszaki pattintott obszidián pengéktől a bronz- és vaskoron át a modern, rozsdamentes acélötvözetekig hatalmas fejlődésen ment keresztül, folyamatosan kísérve és segítve a civilizáció felemelkedését.</p>
+        <p>A kés az emberiség egyik legrégebbi és legfontosabb eszköze. A kőkorszaki pattintott obszidián pengéktől a bronz- és vaskoron át a modern, rozsdamentes acélötvözetekig hatalmas fejlődésen ment keresztül, folyamatosan kísérve és segítve a civilizáció felemelkedését.</p>
     
     <h3>Mire használjuk őket?</h3>
     <p>Funkciójukat tekintve elengedhetetlenek a legkülönfélébb területeken, így az idők során számos specializált változatuk alakult ki:</p>
